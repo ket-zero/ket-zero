@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Rust / C++ build output
+target/
+build/
+
+# Node
+node_modules/
+
+# Env / secrets
+.env
