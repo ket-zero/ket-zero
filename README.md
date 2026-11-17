@@ -1,45 +1,38 @@
 # ket-zero
 
-> Study notes, a quantum circuit simulator, and experiments from my quantum computing course, all in one place.
+> Learning quantum computing by building it: study notes, an open-source quantum simulator in Go, and the tools around it.
 
-`ket-zero` is named after the |0⟩ state, the starting point of nearly every quantum computation. This repository is the hub of the **ket-zero** organization: it describes the project, links to the sub-projects, and explains how everything fits together.
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
+`ket-zero` is named after the |0⟩ state, the starting point of nearly every quantum computation. This repository is the hub of the **ket-zero** organization. It holds the study notes and explains how the other projects fit together.
 
 ## What's in the org
 
-| Area | Purpose | Status |
-|------|---------|--------|
-| Study notes | Course notes, derivations, and worked problems | Planned |
-| Simulator | A state-vector quantum circuit simulator built from scratch | Planned |
-| Algorithms | Implementations of standard algorithms (Deutsch–Jozsa, Grover, QFT, Shor, …) | Planned |
-| Experiments | Small programs and notebooks for exploring ideas | Planned |
+| Project | What it is | Where | Status |
+|---------|-----------|-------|--------|
+| Study notes | Math and physics foundations, course notes, derivations and worked problems | `notes/` in this repo | Starting week 1 (23 Nov 2026) |
+| **qgo** (working name) | A state-vector and density-matrix quantum simulator in Go, with a CLI, circuit drawer, OpenQASM 3 import and a browser playground | separate repo, `github.com/ket-zero/qgo` | v0.1 planned for week 5 |
+| Q# algorithm library | QFT, phase estimation, Grover, Shor-15 and arithmetic circuits in Q#, exported to OpenQASM and cross-checked on qgo | separate repo | Planned, weeks 17–19 |
+| OpenQASM standard library | Reusable OpenQASM 3 gate definitions (QFT, adders, oracles, Grover diffuser) that ship with qgo | inside qgo | Planned, week 20 |
+| Post-quantum crypto notes | What quantum computers mean for today's cryptography, including a resource estimate for breaking RSA-2048 | `notes/pqc/` in this repo | Ongoing |
 
-See [docs/overview.md](docs/overview.md) for goals, scope, architecture, and the roadmap.
-
-## Getting started
-
-```bash
-git clone https://github.com/ket-zero/ket-zero.git
-cd ket-zero
-```
-
-Setup instructions for each sub-project will live in that project's own README.
+See [docs/overview.md](docs/overview.md) for goals, scope and the roadmap.
 
 ## Repository layout
 
 ```
 ket-zero/
 ├── README.md        # you are here
+├── LICENSE          # Apache-2.0
 ├── docs/
-│   └── overview.md  # project overview, goals, roadmap
-└── .gitignore
+│   └── overview.md  # goals, scope, roadmap, decisions
+└── notes/           # study notes (added from week 1)
 ```
-
-Sub-projects will be added as separate repositories in the org (or as top-level folders if kept together).
 
 ## Contributing
 
-This is primarily a personal learning project, but suggestions, corrections to the notes, and issues are welcome. Open an issue before sending a large pull request.
+This is primarily a personal learning project, done in public. Corrections to the notes, questions and issues are very welcome. Please read the [contributing guide](https://github.com/ket-zero/.github/blob/main/CONTRIBUTING.md) and open an issue before sending a large pull request.
 
 ## License
 
-To be decided. Until a license file is added, all rights are reserved.
+Licensed under the [Apache License, Version 2.0](LICENSE).
